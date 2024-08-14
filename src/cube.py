@@ -41,8 +41,7 @@ class Cube:
         self.bottom_face[:, 2] = self.back_face[:, 0][::-1]
         self.back_face[:, 0] = self.top_face[:, 2][::-1]
         self.top_face[:, 2] = temp
-        self.right_face = np.array(
-            np.array(rotate.anti_clockwise(self.right_face)).tolist())
+        self.right_face = np.rot90(m=self.right_face,k=-1,axes=(0,1))
         if n==1:
             self.solution.append("UR")
 
@@ -63,8 +62,7 @@ class Cube:
         self.bottom_face[:, 0] = self.back_face[:, 2][::-1]
         self.back_face[:, 2] = self.top_face[:, 0][::-1]
         self.top_face[:, 0] = temp
-        self.left_face = np.array(
-            np.array(rotate.clockwise(self.left_face)).tolist())
+        self.left_face = np.rot90(m=self.left_face,k=1,axes=(0,1))
         if n==1:
             self.solution.append("UL")
     
@@ -85,8 +83,7 @@ class Cube:
         self.left_face[0] = self.back_face[0]
         self.back_face[0] = self.right_face[0]
         self.right_face[0] = temp
-        self.top_face = np.array(
-            np.array(rotate.clockwise(self.top_face)).tolist())
+        self.top_face = np.rot90(m=self.top_face,k=1,axes=(0,1))
         if n==1:
             self.solution.append("L")
     
@@ -98,8 +95,7 @@ class Cube:
         self.right_face[0] = self.back_face[0]
         self.back_face[0] = self.left_face[0]
         self.left_face[0] = temp
-        self.top_face = np.array(
-            np.array(rotate.anti_clockwise(self.top_face)).tolist())
+        self.top_face = np.rot90(m=self.top_face,k=-1,axes=(0,1))
         if n==1:
             self.solution.append("R")
 
@@ -111,8 +107,7 @@ class Cube:
         self.bottom_face[0] = self.right_face[:, 0][::-1]
         self.right_face[:, 0] = self.top_face[2]
         self.top_face[2] = temp[::-1]
-        self.front_face = np.array(
-            np.array(rotate.anti_clockwise(self.front_face)).tolist())
+        self.front_face = np.rot90(m=self.front_face,k=-1,axes=(0,1))
         if n==1:
             self.solution.append("F")
 
@@ -124,8 +119,7 @@ class Cube:
         self.left_face[:, 2] = self.top_face[2][::-1]
         self.top_face[2] = self.right_face[:, 0]
         self.right_face[:, 0] = temp[::-1]
-        self.front_face = np.array(
-            np.array(rotate.clockwise(self.front_face)).tolist())
+        self.front_face = np.rot90(m=self.front_face,k=1,axes=(0,1))
         if n==1:
             self.solution.append("F'")
 
@@ -137,9 +131,7 @@ class Cube:
         self.right_face = self.back_face
         self.back_face = self.left_face
         self.left_face = temp
-        self.top_face = np.array(
-            np.array(rotate.anti_clockwise(self.top_face)).tolist())
-        self.bottom_face = np.array(
-            np.array(rotate.clockwise(self.bottom_face)).tolist())
+        self.top_face = np.rot90(m=self.top_face,k=-1,axes=(0,1))
+        self.bottom_face = np.rot90(self.bottom_face,1,axes=(0,1))
         if n==1:
             self.solution.append("ROR")
