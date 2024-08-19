@@ -27,7 +27,7 @@ class TestAlgo(algorithms.Algorithms):
     def test_bottom_corners(self):
         test_object=bottom_corner_cases.TestBottomCorner()
         failures=0
-        for i,j in enumerate(test_object.in_matrix):
+        for i,_ in enumerate(test_object.in_matrix):
             self.initialize(test_object,i)
             self.bottom_corner()
             if (self.matches(test_object,i))==False:
@@ -38,7 +38,7 @@ class TestAlgo(algorithms.Algorithms):
     def test_right_middle(self):
         test_object=right_middle_cases.TestRightMiddle()
         failures=0
-        for i,j in enumerate(test_object.in_matrix):
+        for i,_ in enumerate(test_object.in_matrix):
             self.initialize(test_object,i)
             self.right_middle()
             if (self.matches(test_object,i))==False:
@@ -48,7 +48,7 @@ class TestAlgo(algorithms.Algorithms):
     def test_left_middle(self):
         test_object=left_middle_cases.TestLeftMiddle()
         failures=0
-        for i,j in enumerate(test_object.in_matrix):
+        for i,_ in enumerate(test_object.in_matrix):
             self.initialize(test_object,i)
             self.left_middle()
             if (self.matches(test_object,i))==False:
@@ -58,7 +58,7 @@ class TestAlgo(algorithms.Algorithms):
     def test_top_middle(self):
         test_object=top_middle_cases.TestTopMiddle()
         failures=0
-        for i,j in enumerate(test_object.in_matrix):
+        for i,_ in enumerate(test_object.in_matrix):
             self.initialize(test_object,i)
             self.top_middle()
             if (self.matches(test_object,i))==False:
@@ -68,7 +68,7 @@ class TestAlgo(algorithms.Algorithms):
     def test_top_corners(self):
         test_object=top_corner_cases.TestTopCorner()
         failures=0
-        for i,j in enumerate(test_object.in_matrix):
+        for i,_ in enumerate(test_object.in_matrix):
             self.initialize(test_object,i)
             self.top_corner()
             if (self.matches(test_object,i))==False:
@@ -78,7 +78,7 @@ class TestAlgo(algorithms.Algorithms):
     def test_top_layer(self):
         test_object=top_layer_cases.TestTopLayer()
         failures=0
-        for i,j in enumerate(test_object.in_matrix):
+        for i,_ in enumerate(test_object.in_matrix):
             self.initialize(test_object,i)
             self.top_layer()
             if (self.matches(test_object,i))==False:

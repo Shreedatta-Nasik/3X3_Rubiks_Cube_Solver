@@ -1,12 +1,12 @@
-import half_t_3
+import three
 
-class MiddleLayer(half_t_3.Half_t):
+class MiddleLayer(three.Half_t):
     
     count_mid_lyr=0
     
     def no_mid_pcs(self) -> int:
         r=0
-        for j in range(4):
+        for _ in range(4):
             if self.front_face[0][1]!=5 and self.top_face[2][1]!=5:
                     r=r+1
             self.rotate_cube(0)
@@ -20,8 +20,8 @@ class MiddleLayer(half_t_3.Half_t):
         return
     
     def four_middle_layer(self) -> None:
-       for i in range(15):
-           for j in range(8):
+       for _ in range(15):
+           for _ in range(8):
                if((self.front_face[1][0]+self.front_face[1][1]+self.front_face[1][2]==3*self.front_face[1][1])and 
                   self.left_face[1][2]==self.left_face[1][1] and 
                   self.right_face[1][0]==self.right_face[1][1]):

@@ -1,9 +1,9 @@
-import yellow_cross_5
+import five
 
-class FullT(yellow_cross_5.YellowCross):
+class FullT(five.YellowCross):
     
     def six_full_t(self) -> None:
-        for i in range(4):
+        for _ in range(4):
             while(self.front_face[0][1]!=self.front_face[1][1]):
                 self.right(1)
             if(self.front_face[0][1]==self.front_face[1][1] and 
@@ -24,7 +24,7 @@ class FullT(yellow_cross_5.YellowCross):
             else:
                 self.rotate_cube(1)
         
-        for i in range(4):
+        for _ in range(4):
             self.top_middle()
             for i in range(4):
                 if(self.front_face[0][1]==self.front_face[1][1] and 

@@ -1,5 +1,4 @@
 import numpy as np
-import rotate_matrix as rotate
 
 #this class defines the basic movements of the cube.
 class Cube:
@@ -15,6 +14,9 @@ class Cube:
     bottom_face = []
 
     solution = []
+    #while calling the functions the 1,0 is used for whether the called funtion is incuded in the solution list or not
+    #up_right(0) means that i am performing up_right but do not add this to the solution list
+    #uo_right(1) means the opposite
 
     def input_cube(self):
         
@@ -135,3 +137,13 @@ class Cube:
         self.bottom_face = np.rot90(self.bottom_face,1,axes=(0,1))
         if n==1:
             self.solution.append("ROR")
+    
+    #function for printing the cube
+    def print_face(self) -> None:
+
+        print(f'{np.array(self.front_face).tolist()},')
+        print(f'{np.array(self.right_face).tolist()},')
+        print(f'{np.array(self.back_face).tolist()},')
+        print(f'{np.array(self.left_face).tolist()},')
+        print(f'{np.array(self.top_face).tolist()},')
+        print(f'{np.array(self.bottom_face).tolist()}')

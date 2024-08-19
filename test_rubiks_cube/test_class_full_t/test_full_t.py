@@ -3,10 +3,10 @@ import os
 src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'src'))
 sys.path.append(src_path)
 import numpy as np
-import full_t_6
+import s6x
 import full_t_cases
 
-class TestMidLyr(full_t_6.FullT):
+class TestMidLyr(s6x.FullT):
     
     def initialize(self,test_object,n) -> None:
         self.front_face=test_object.in_matrix[n][0]
@@ -36,7 +36,7 @@ class TestMidLyr(full_t_6.FullT):
     def test_full_t(self):
         test_object=full_t_cases.TestCaseFullT()
         failures=0
-        for i,j in enumerate(test_object.in_matrix):
+        for i,_ in enumerate(test_object.in_matrix):
             self.initialize(test_object,i)
             self.six_full_t()
             if(self.matches(test_object,i))==False:

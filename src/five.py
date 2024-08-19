@@ -1,10 +1,10 @@
-import middle_layer_4
+import four
 
-class YellowCross(middle_layer_4.MiddleLayer):
+class YellowCross(four.MiddleLayer):
     
     def five_yellow_cross(self) -> None:
         
-        for i in range(2):
+        for _ in range(2):
             if(self.top_face[0][1]+self.top_face[1][0]+self.top_face[1][1]+self.top_face[1][2]+self.top_face[2][1]==25):
                 return
             elif (self.top_face[1][0]+self.top_face[1][1]+self.top_face[1][2]==15):

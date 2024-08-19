@@ -1,5 +1,8 @@
 import cube
 
+#this class defines the algorithms that are used in the different phases of the daisy-chain algorithm
+#this is made up by the basic movements of the cube
+
 class Algorithms(cube.Cube): 
     
     #half_t algorithm

@@ -1,10 +1,10 @@
-import penultimate_7
+import seven
 
-class AllYellow(penultimate_7.Penultimate):
+class AllYellow(seven.Penultimate):
     
     count_yellow=0
     def eight_all_yellow(self) -> None:
-        for i in range(4):
+        for _ in range(4):
             if self.count_yellow==4:
                 break
             elif self.top_face[2][0]==5:
@@ -12,7 +12,7 @@ class AllYellow(penultimate_7.Penultimate):
                 self.rotate_cube(1)
             else:
                 break
-        for i in range(4):
+        for _ in range(4):
             if self.count_yellow==4:
                 break
             else:

@@ -4,6 +4,7 @@ import algorithms as al
 class Daisy(al.Algorithms):
     
     count_daisy=0
+    #counts the number of pieces which have been solved
     
     def white(self,i,j) -> None:
         if i==0 and j ==1:
@@ -16,7 +17,6 @@ class Daisy(al.Algorithms):
             self.front_right(1)
             self.left(1)
         if i==2:
-            print(1)
             self.front_left(1)
             self.left(1)
         if j==0:
@@ -35,8 +35,27 @@ class Daisy(al.Algorithms):
                 self.right(1)
             self.up_right(1)
             self.up_right(1)
-            
-                        
+                
+    def bottom_face_condition(self) -> None:
+        for _ in range(2):
+            if self.count_daisy==4:
+                return 
+            if self.bottom_face[0][1]==6:
+                self.rotate_cube(1)
+                self.bottom_white(0)
+                self.count_daisy+=1
+            if self.bottom_face[1][0]==6:
+                self.bottom_white(0)
+                self.count_daisy+=1
+            if self.bottom_face[1][2]==6:
+                self.bottom_white(2)
+                self.count_daisy+=1
+            if self.bottom_face[2][1]==6:
+                self.rotate_cube(1)
+                self.bottom_white(2)
+                self.count_daisy+=1
+    
+    #main function
     def one_daisy(self) -> None:
         for i in range(12):
             if self.front_face[0][1]==6:
@@ -60,23 +79,4 @@ class Daisy(al.Algorithms):
             elif i==11:
                 self.bottom_face_condition()
             else:
-                self.rotate_cube(1)        
-        
-    def bottom_face_condition(self) -> None:
-        for i in range(2):
-            if self.count_daisy==4:
-                return 
-            if self.bottom_face[0][1]==6:
-                self.rotate_cube(1)
-                self.bottom_white(0)
-                self.count_daisy+=1
-            if self.bottom_face[1][0]==6:
-                self.bottom_white(0)
-                self.count_daisy+=1
-            if self.bottom_face[1][2]==6:
-                self.bottom_white(2)
-                self.count_daisy+=1
-            if self.bottom_face[2][1]==6:
-                self.rotate_cube(1)
-                self.bottom_white(2)
-                self.count_daisy+=1
+                self.rotate_cube(1)   

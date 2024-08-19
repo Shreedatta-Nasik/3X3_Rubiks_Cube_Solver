@@ -2,11 +2,10 @@ import sys
 import os
 src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'src'))
 sys.path.append(src_path)
-import white_cross_2
+import two
 import wht_cross_cases
-import numpy as np
 
-class TestWhtCross(white_cross_2.White_cross):
+class TestWhtCross(two.White_cross):
     
     
     def initialize(self,test_object,n) -> None:
@@ -16,15 +15,6 @@ class TestWhtCross(white_cross_2.White_cross):
         self.left_face=test_object.in_matrix[n][3]
         self.top_face=test_object.in_matrix[n][4]
         self.bottom_face=test_object.in_matrix[n][5]
-        
-    def print_face(self):
-        print(f'{np.array(self.front_face).tolist()},')
-        print(f'{np.array(self.right_face).tolist()},')
-        print(f'{np.array(self.back_face).tolist()},')
-        print(f'{np.array(self.left_face).tolist()},')
-        print(f'{np.array(self.top_face).tolist()},')
-        print(f'{np.array(self.bottom_face).tolist()}')
-        
         
     def matches(self,test_object,n):
         return ( (self.front_face==test_object.out_matrix[n][0]).all() and
@@ -37,11 +27,10 @@ class TestWhtCross(white_cross_2.White_cross):
     def test_wht_cross(self):
         test_object=wht_cross_cases.TestCaseWhtCross()
         failures=0
-        for i,j in enumerate(test_object.in_matrix):
+        for i,_ in enumerate(test_object.in_matrix):
             self.initialize(test_object,i)
             self.one_daisy()
             self.two_white_cross()
-            self.print_face()
             if(self.matches(test_object,i))==False:
                 failures+=1
         assert failures==0
