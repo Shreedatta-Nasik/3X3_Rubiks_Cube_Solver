@@ -1,5 +1,9 @@
-from src import white_cross_2
-from test_rubiks_cube.test_class_cross import wht_cross_cases
+import sys
+import os
+src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'src'))
+sys.path.append(src_path)
+import white_cross_2
+import wht_cross_cases
 
 class TestWhtCross(white_cross_2.White_cross):
     

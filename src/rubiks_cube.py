@@ -96,16 +96,16 @@ class RubiksCube(all_yellow_8.AllYellow):
         self.left_face = np.array([[2]*3]*3)
         self.bottom_face = np.array([[6]*3]*3)
         self.right_face = np.array([[3]*3]*3)
-        moves={1:self.up_left(0),
-            2:self.up_right(0),
-            3:self.down_left(0),
-            4:self.down_right(0),
-            5:self.right(0),
-            6:self.left(0),
-            7:self.front_right(0),
-            8:self.front_left(0),
-            9:self.rotate_cube(0)}
-        for i in range(50):
+        moves={1:self.up_left,
+            2:self.up_right,
+            3:self.down_left,
+            4:self.down_right,
+            5:self.right,
+            6:self.left,
+            7:self.front_right,
+            8:self.front_left,
+            9:self.rotate_cube}
+        for i in range(200):
             m=random.randint(1,9)
-            moves.get(m)
+            moves[m](0)
         return

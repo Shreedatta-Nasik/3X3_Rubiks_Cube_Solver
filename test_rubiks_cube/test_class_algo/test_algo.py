@@ -1,6 +1,9 @@
-
-from test_rubiks_cube.test_class_algo.test_cases import bottom_corner_cases,right_middle_cases,left_middle_cases,top_middle_cases,top_corner_cases,top_layer_cases
-from src import algorithms
+from test_cases import bottom_corner_cases,right_middle_cases,left_middle_cases,top_middle_cases,top_corner_cases,top_layer_cases
+import sys
+import os
+src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'src'))
+sys.path.append(src_path)
+import algorithms
 
 class TestAlgo(algorithms.Algorithms):
     

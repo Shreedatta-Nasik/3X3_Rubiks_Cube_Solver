@@ -1,5 +1,9 @@
-from src import cube
-from test_rubiks_cube.test_class_cube.test_cases import down_right_cases,up_left_cases,up_right_cases,down_left_cases,left_cases,right_cases,front_right_cases,front_left_cases,rotate_cube_cases
+import sys
+import os
+src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'src'))
+sys.path.append(src_path)
+import cube
+from test_cases import down_right_cases,up_left_cases,up_right_cases,down_left_cases,left_cases,right_cases,front_right_cases,front_left_cases,rotate_cube_cases
 
 class TestCube(cube.Cube):
 

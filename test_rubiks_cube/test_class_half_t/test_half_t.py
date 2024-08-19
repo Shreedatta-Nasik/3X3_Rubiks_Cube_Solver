@@ -1,6 +1,10 @@
+import sys
+import os
+src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'src'))
+sys.path.append(src_path)
 import numpy as np
-from src import half_t_3
-from test_rubiks_cube.test_class_half_t import half_t_cases
+import half_t_3
+import half_t_cases
 
 class TestHalfT(half_t_3.Half_t):
     
@@ -37,5 +41,6 @@ class TestHalfT(half_t_3.Half_t):
             self.three_half_t()
             self.print_face()
             if(self.matches(test_object,i))==False:
+                print('govinda')
                 failures+=1
         assert failures==0

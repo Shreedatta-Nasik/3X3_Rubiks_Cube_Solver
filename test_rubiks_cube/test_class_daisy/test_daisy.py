@@ -1,5 +1,9 @@
-from src import daisy_1
-from test_rubiks_cube.test_class_daisy import daisy_cases
+import sys
+import os
+src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'src'))
+sys.path.append(src_path)
+import daisy_1
+import daisy_cases
 
 class TestDaisy(daisy_1.Daisy):
     
