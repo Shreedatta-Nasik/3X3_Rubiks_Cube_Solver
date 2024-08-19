@@ -6,11 +6,19 @@ class Daisy(al.Algorithms):
     count_daisy=0
     
     def white(self,i,j) -> None:
-        while(self.top_face[i][j]==6):
-            self.right(1)
-        if i==2:
+        if i==0 and j ==1:
+            while(self.top_face[2][1]==6):
+                self.right(1)
+        else:    
+            while(self.top_face[i][j]==6):
+                self.right(1)
+        if i==0:
+            self.front_right(1)
             self.left(1)
+        if i==2:
+            print(1)
             self.front_left(1)
+            self.left(1)
         if j==0:
             self.up_left(1)
         else:
@@ -30,10 +38,9 @@ class Daisy(al.Algorithms):
             
                         
     def one_daisy(self) -> None:
-        for i in range(8):
+        for i in range(12):
             if self.front_face[0][1]==6:
-                self.front_right(1)
-                self.white(1,2)
+                self.white(0,1)
                 self.count_daisy+=1
                 continue
             if self.front_face[1][0]==6:
@@ -50,7 +57,7 @@ class Daisy(al.Algorithms):
                 continue
             if self.count_daisy==4:
                 return 
-            elif i==7:
+            elif i==11:
                 self.bottom_face_condition()
             else:
                 self.rotate_cube(1)        

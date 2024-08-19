@@ -4,6 +4,7 @@ src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '
 sys.path.append(src_path)
 import white_cross_2
 import wht_cross_cases
+import numpy as np
 
 class TestWhtCross(white_cross_2.White_cross):
     
@@ -17,12 +18,12 @@ class TestWhtCross(white_cross_2.White_cross):
         self.bottom_face=test_object.in_matrix[n][5]
         
     def print_face(self):
-        print(self.front_face)
-        print(self.right_face)
-        print(self.back_face)
-        print(self.left_face)
-        print(self.top_face)
-        print(self.bottom_face)
+        print(f'{np.array(self.front_face).tolist()},')
+        print(f'{np.array(self.right_face).tolist()},')
+        print(f'{np.array(self.back_face).tolist()},')
+        print(f'{np.array(self.left_face).tolist()},')
+        print(f'{np.array(self.top_face).tolist()},')
+        print(f'{np.array(self.bottom_face).tolist()}')
         
         
     def matches(self,test_object,n):
@@ -40,6 +41,7 @@ class TestWhtCross(white_cross_2.White_cross):
             self.initialize(test_object,i)
             self.one_daisy()
             self.two_white_cross()
+            self.print_face()
             if(self.matches(test_object,i))==False:
                 failures+=1
         assert failures==0

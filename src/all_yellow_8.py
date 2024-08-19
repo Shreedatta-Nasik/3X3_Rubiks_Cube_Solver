@@ -4,12 +4,17 @@ class AllYellow(penultimate_7.Penultimate):
     
     count_yellow=0
     def eight_all_yellow(self) -> None:
-        for i in range(5):
+        for i in range(4):
             if self.count_yellow==4:
                 break
             elif self.top_face[2][0]==5:
                 self.count_yellow+=1
                 self.rotate_cube(1)
+            else:
+                break
+        for i in range(4):
+            if self.count_yellow==4:
+                break
             else:
                 while(self.top_face[2][0]!=5):
                     self.top_layer()

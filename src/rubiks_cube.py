@@ -90,6 +90,7 @@ class RubiksCube(all_yellow_8.AllYellow):
         return
     
     def randomize(self):
+        print('1')
         self.top_face = np.array([[5]*3]*3)
         self.front_face = np.array([[1]*3]*3)
         self.back_face = np.array([[4]*3]*3)
@@ -105,7 +106,8 @@ class RubiksCube(all_yellow_8.AllYellow):
             7:self.front_right,
             8:self.front_left,
             9:self.rotate_cube}
-        for i in range(200):
+        for i in range(1000):
             m=random.randint(1,9)
-            moves[m](0)
+            moves[m](1)
+        self.solution.append('govinda')
         return
