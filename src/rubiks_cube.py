@@ -3,9 +3,28 @@ import numpy as np
 import eight
 
 class RubiksCube(eight.AllYellow):
+
+    def process(self):
+    
+        sol=[]
+        i=0
+        while(i<(len(self.solution)-3)):
+            if (self.solution[i]!=self.solution[i+1] or self.solution[i+1]!=self.solution[i+2] or self.solution[i+2]!=self.solution[i+3]):
+                sol.append(self.solution[i])
+                i+=1
+            else:
+                i+=4
+        if (i==len(self.solution)-3):
+            sol.append(self.solution[i])
+            sol.append(self.solution[i+1])
+            sol.append(self.solution[i+2])
+        return sol
+
+
+
     
     #this Function solves the Rubik's cube
-    def rubiks_cube(self):\
+    def rubiks_cube(self):
         
         print("Scrambled Cube")
         self.print_face()
@@ -35,6 +54,9 @@ class RubiksCube(eight.AllYellow):
         self.print_face()
         while not (self.front_face[0][1]==self.front_face[1][1]):
             self.right()
+        print(self.solution)
+        print(1)
+        self.solution=self.process()
         return
     
     #this function scrambles the a solved cube by performing random cube movements for a certain steps
