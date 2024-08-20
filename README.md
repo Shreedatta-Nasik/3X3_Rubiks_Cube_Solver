@@ -63,16 +63,16 @@ to execute these tests and testcases install pytest and execute the command pyte
 
  ### 1. Input the scrambled cube and solve:
 
-      from rubiks_cube import RubiksCube
-      cube=RubiksCube()
+      from rubiks_cube import rubiks_cube
+      cube=rubiks_cube.RubiksCube()
       cube.input_cube()
       cube.rubiks_cube()
       print(cube.solution)
 
  ### 2. Randomize the Scramble and solve:
 
-      from rubiks_cube import RubiksCube
-      cube=RubiksCube()
+      from rubiks_cube import rubiks_cube
+      cube=rubiks_cube.RubiksCube()
       cube.randomize()
       cube.rubiks_cube()
       print(cube.solution)
