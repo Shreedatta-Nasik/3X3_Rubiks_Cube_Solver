@@ -20,17 +20,17 @@ class Cube:
 
     def input_cube(self):
         
-        self.top_face = self.input_face()
-        self.front_face = self.input_face()
-        self.back_face = self.input_face()
-        self.left_face = self.input_face()
-        self.bottom_face = self.input_face()
-        self.right_face = self.input_face()
+        self.front_face = self.input_face('Front Face')
+        self.right_face = self.input_face('Right Face')
+        self.back_face = self.input_face('Back Face')
+        self.left_face = self.input_face('Left Face')
+        self.top_face = self.input_face('Top Face')
+        self.bottom_face = self.input_face('Bottom Face')
 
-    def input_face(self) -> np.array:
+    def input_face(self,face_name) -> np.array:
 
         face = list(map(str.upper, input(
-            "Enter the matrix of the faces").split()))
+            f"Enter the {face_name} matrix of the faces").split()))
         for i, j in enumerate(face):
             face[i] = self.cube_code.get(j)
         return np.array(face).reshape(3, 3)

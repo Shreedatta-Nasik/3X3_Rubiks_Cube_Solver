@@ -19,9 +19,6 @@ class RubiksCube(eight.AllYellow):
             sol.append(self.solution[i+1])
             sol.append(self.solution[i+2])
         return sol
-
-
-
     
     #this Function solves the Rubik's cube
     def rubiks_cube(self):
@@ -54,8 +51,6 @@ class RubiksCube(eight.AllYellow):
         self.print_face()
         while not (self.front_face[0][1]==self.front_face[1][1]):
             self.right()
-        print(self.solution)
-        print(1)
         self.solution=self.process()
         return
     
