@@ -7,37 +7,38 @@ to execute these tests and testcases install pytest and execute the command pyte
 
 ## The 7 patterns
   1. Daisy
-     ![1.Daisy](https://github.com/user-attachments/assets/8fb87cd8-1871-4c07-a37d-252f3f12804b)
+     ![image](https://github.com/user-attachments/assets/7ee283ee-892e-4007-82e9-2287977b0a20)
   2. White Cross
-     ![image](https://github.com/user-attachments/assets/05673e41-cc1a-4a0a-a2fc-d7200735b072)
+     ![image](https://github.com/user-attachments/assets/8018a46d-6e48-40bd-b695-44ae1014da12)
   3. Half TY
-     ![image](https://github.com/user-attachments/assets/d362a9f0-30c3-4b1b-8abe-1620de8bf94e)
+     ![image](https://github.com/user-attachments/assets/1a7dade5-7999-4874-baea-7357d7aa1eab)
   4. Middle
-     ![image](https://github.com/user-attachments/assets/48981d7c-9ddd-45d0-a4ef-4daf4f006880)
+     ![image](https://github.com/user-attachments/assets/7d5078be-c8f9-4226-82b0-2eab0e6511d0)
   5. Full T
-     ![image](https://github.com/user-attachments/assets/168a66d5-3f5b-4518-9c6a-be4d6a164ed4)
+     ![image](https://github.com/user-attachments/assets/33e0b05e-7c86-4e15-a4c1-1b235d8db24b)
   6. Penultimate
-     ![image](https://github.com/user-attachments/assets/adf25297-dfc7-4f56-bd44-d78f1932f754)
+     ![image](https://github.com/user-attachments/assets/d732c1b7-6996-43fa-8f9f-05d274bcf4d9)
   7. Complete
-     ![image](https://github.com/user-attachments/assets/48e9b775-beda-4d5b-aad4-152caaae37f4)
+     ![image](https://github.com/user-attachments/assets/3e9b244e-f526-4117-a05d-b1d11de7d9e3)
+
 
 ## Cube Movements
   1. Up right [UR]
-     ![image](https://github.com/user-attachments/assets/039834d5-c5b3-4882-b210-02d13702b5e7)
+    ![image](https://github.com/user-attachments/assets/fff3f929-0b47-4532-9fbb-2b0566ccd011)
   2. Down right [UR']
-     ![image](https://github.com/user-attachments/assets/ae9775c2-ed3c-4da6-a69c-99f359cb2ebd)
+     ![image](https://github.com/user-attachments/assets/c3a48cd3-b580-4a3f-bb88-d41888fb7d4f)
   3. Up left [UL]
-     ![image](https://github.com/user-attachments/assets/276336b7-5e0b-43b3-ac75-02ee4c1633b8)
+     ![image](https://github.com/user-attachments/assets/da126661-e54f-4609-8973-938511257747)
   4. Down left [UL']
-     ![image](https://github.com/user-attachments/assets/c0338ebd-4e05-4102-8fa5-352d5c228d39)
+     ![image](https://github.com/user-attachments/assets/151d4616-369d-4962-b2dd-0bb1606adc9e)
   5. Left[ L]
-     ![image](https://github.com/user-attachments/assets/f6eaf2ee-0c73-4ab0-9ba8-393ba2cb6a23)
+     ![image](https://github.com/user-attachments/assets/46a9eb0f-e1f4-4a22-9c29-a71f3bc1153b)
   6. Right [R]
-     ![image](https://github.com/user-attachments/assets/8ce8aaa9-5c07-4a54-b6a4-561f6fdf15c9)
+     ![image](https://github.com/user-attachments/assets/afedf707-6ba0-442d-a32a-35b10d3b1459)
   7. Front right [F]
-      ![image](https://github.com/user-attachments/assets/59820671-1466-44a1-a180-b9af3c62a4cf)
+      ![image](https://github.com/user-attachments/assets/55270127-1422-4c31-8701-b35e6357bd1b)
   8. Front left [F']
-      ![image](https://github.com/user-attachments/assets/cbbf13d2-acb5-413a-8e00-6864b2b5d85b)
+      ![image](https://github.com/user-attachments/assets/495dc726-12ba-4ed4-b5a4-887b86307822)
   9. Rotate cube [ROR]:
       Here the front face which was facing is rotated left. so for the above example if the front face was White the after this movement the front face would be Blue
 
